@@ -1,4 +1,4 @@
-name: Deploy Node.js Application
+name: Build and Deploy Frontend
 
 on:
   push:
@@ -16,19 +16,19 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'
+          node-version: '14' # or the version you prefer
 
       - name: Install dependencies
         run: |
-          set -e
-          npm install || (echo 'NPM install failed' && exit 1)
+          cd frontend
+          npm install
 
-      - name: Run build
+      - name: Build frontend
         run: |
-          set -e
-          npm run build || (echo 'Build failed' && exit 1)
+          cd frontend
+          npm run build
 
       - name: Deploy
         run: |
-          set -e
-          npm run deploy || (echo 'Deployment failed' && exit 1)
+          # Add deployment commands here
+          echo 'Deploying...'
