@@ -52,7 +52,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/">
             <motion.div whileHover={{ scale: 1.05 }} className="flex-shrink-0 cursor-pointer flex items-center gap-2">
-              <img src="/Logo%20Farm.png" alt="Indopalm Logo" className="h-10 w-auto drop-shadow" />
+              <img src="/websapi/Logo%20Farm.png" alt="Indopalm Logo" />
               <span className="text-2xl font-black text-white tracking-tighter drop-shadow">
                 indopalm<span className="text-yellow-200">Qu</span>
               </span>
